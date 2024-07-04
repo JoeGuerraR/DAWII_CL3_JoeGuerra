@@ -1,1 +1,9 @@
-<p>episodios works!</p>
+@if (episodes.length >0) {
+    <div class="container">
+        <ul>
+            @for (episode of episodes; track episode.id) {
+                <li>{{episode.name}}</li>
+            }
+        </ul>
+    </div>
+}
