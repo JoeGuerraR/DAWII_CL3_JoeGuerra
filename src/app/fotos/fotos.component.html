@@ -1,1 +1,16 @@
-<p>fotos works!</p>
+@if (fotos.length > 0) {
+    <div class="container my-5">
+        <div class="row">
+            @for (foto of fotos; track foto.id) {
+                <div class="col-xl-4 col-sm-6 col-xs-12">
+                    <div class="card my-5" style="width: 18rem;">
+                        <img [src]="foto.thumbnailUrl" [alt]="foto.title">
+                        <div class="card-body">
+                            <h5 class="card-title">{{foto.title}}</h5>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

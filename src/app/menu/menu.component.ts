@@ -16,4 +16,8 @@ export class MenuComponent {
     this.router.navigate(["episodios"], {relativeTo: this.route});
 
   }
+  irFoto(): void{
+    this.router.navigate(["fotos"], {relativeTo: this.route})
+  }
+
 }
